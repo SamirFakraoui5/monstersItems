@@ -7,12 +7,12 @@ export const CardList = (props) =>{
     return ( 
     <div className ='card-list'>
        {
-           props.monster.map( monster => {
+           props.monsters.map( monster => {
             return(
-                <div>
-                   <Card key={monster.id} monster={monster}/>
+                <div key={monster.id}>
+                   <Card monsters={monster}/>
                 </div>
-            )
+            ) 
            })  
          }
     </div>
