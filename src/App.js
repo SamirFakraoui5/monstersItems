@@ -11,6 +11,9 @@ class App extends React.Component {
       monsters:[],
       searchField :''
     }
+
+    // the solution is to use arou function
+    this.handlChange = this.handlChange.bind(this)
   };
 
   // called when the app get rendered to the dom for the 
@@ -23,6 +26,7 @@ class App extends React.Component {
 
   // detect   the change of the input value
   handlChange = (event) =>{
+    console.log("change function",this);
      this.setState({searchField:event.target.value})
   } 
   render(){
@@ -34,6 +38,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <h1 className='title'>Monsters Rolodex</h1>
         <SearchBox  handlChange={this.handlChange} placeholder='search monsters'/>
         <CardList monsters={filtredMonster}/>
       </div>   
