@@ -36,9 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.monster{
-  width: auto;
-  margin: 10px;
-  border: 1px solid grey;
-  border-radius: 5px;
-}
