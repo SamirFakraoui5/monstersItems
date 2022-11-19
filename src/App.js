@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { CardList } from './componants/card-list/card.componant';
 
 class App extends React.Component {
   constructor(){
@@ -28,6 +29,7 @@ class App extends React.Component {
               <div key={monster.id} className="monster">
                 <h2> {monster.username}</h2>
                 <h3>{monster.email}</h3>
+                <CardList/>
               </div>
             )
            }) 
